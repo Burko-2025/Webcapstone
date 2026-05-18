@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+    if (!isset($_SESSION['isLoggedIn'])){
+        header("Location: login_form.php");
+        die();
+    }
+    require 'database.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,27 +14,47 @@ session_start();
         <link rel="stylesheet" type="text/css" href="css/app.css"/>
       </head>
 
-    <body>
-        <header>
-            <h1>Workout Tracker</h1>
-        </header>
-
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="workouts.php">Workouts</a></li>
-                <li><a href="exercises.php">Exercises</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-
+        <?php include 'header.php'; ?>
+        <body>
         <main>
-            <h2>Welcome to the Workout Tracker!</h2>
-            <p>Track your workouts and exercises easily.</p>
+            <h6>Welcome to the Workout Tracker Page(<?php echo $_SESSION['userName']; ?>)</h6>
+            <h7>Today is a great day to improve yourself!</h7><br>
+            <h8>Current Workout</h8>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="workoutTable"></tbody>
+            </table>
+
+            <div id="setsContainer"></div>
+
+<button class="finish-btn" onclick="finishWorkout()">
+    Finish Workout
+</button>
+
+<button class="clear-btn" onclick="clearWorkout()">
+    Clear Workout
+</button><br>
+            <h8>Previous Workouts</h8>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Exercises</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="previousWorkoutsTable"></tbody>
+            </table>
+            <script src="home.js"></script>
         </main>
 
-        <footer>
-            <p>&copy; 2024 Workout Tracker</p>
-        </footer>
+        <?php include 'footer.php'; ?>
     </body>
 </html>

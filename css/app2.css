@@ -1,0 +1,417 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+p {
+  margin: 20px 0;
+}
+header {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  background: url('../images/workoutheaderBkg.png');
+  background-size: 100% 100%;
+  font-size: 5em;
+  color: #300af0;
+  padding-top: 250px;
+  text-shadow: 2px 2px 4px #fcfafa;
+  font-family: "Bowlby One SC";
+
+}
+body {
+  width: 100%;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+#logo {
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  left: 50px;
+  width: 140px;
+
+}
+  #logo > img {
+    width: 140px;
+
+  }
+#social {
+  position: absolute;
+  z-index: 7;
+  top: 50px;
+  right: 200px;
+  width: 225px;
+}
+.socialFacebook {
+  position: relative;
+  top: -8px;
+}
+#social > .socialDragonbit:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+#social > .socialLinkedin:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+#social > .socialFacebook:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+  .press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .bbh-sans-hegarty-regular {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .asset-regular {
+  font-family: "Asset", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .bowlby-one-sc-regular {
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 25px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130px;
+    height:700px; 
+    /* overflow-y: auto; to make the menu scrollable */
+    grid-row: 2;
+}
+
+/* Navigation links */
+nav a {
+    text-decoration: none;
+    color: #fefefe;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: white;
+}
+main {
+  width: 100%;
+  min-height: 800px;
+  background: #0F2027;  /* fallback for old browsers */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: left;
+}
+.login-details {
+    padding: 20px;
+    display: block;
+    width: 45%;
+    min-height: 600px;
+    margin: 0 auto;
+    border: 4px solid #010101;
+}
+.login-page main {
+    min-height: 100%;
+}
+.login-page main h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.login-page main form {
+    display: flex;
+    flex-direction: column;
+    
+}
+.login-page main form label {
+    font-size: 2em;
+    margin-bottom: 10px;
+} 
+.login-page main form input {
+    padding: 10px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border: 2px solid #010101;
+    border-radius: 5px;
+}
+.register-page main {
+    min-height: 100%;
+}
+.register-page main h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.register-page main form {
+    display: flex;
+    flex-direction: column;
+    
+}
+.register-page main form label {
+    font-size: 2em;
+    margin-bottom: 10px;
+} 
+.register-page main form input {
+    padding: 10px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border: 2px solid #010101;
+    border-radius: 5px;
+}
+.register-page .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;              /* spacing between label & input */
+    margin-bottom: 15px;
+}
+.register-page .form-row label {
+    min-width: 320px;       /* use min-width instead of width */
+}
+.add-button {
+    border: #010101 solid 2px;  
+    display: block;
+    margin: 25px 0px;
+    width: fit-content;
+    padding: 10px 15px;
+    background-color: #000000;
+    text-decoration: none;
+    color: #fbfafa;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    line-height: normal;
+    font-size: 2em;
+}
+
+.add-button:hover {
+    background-color: #383838;
+}
+
+.add-button a {
+    color: #fbfafa;
+    text-decoration: none;
+}
+#data {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;              /* spacing between label & input */
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  min-width: 250px;       /* use min-width instead of width */
+}
+
+.form-row input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.form-row-register {
+  display: flex;
+  align-items: center;
+  gap: 10px;              /* spacing between label & input */
+  margin-bottom: 15px;
+}
+.form-row-register label {
+  min-width: 250px;       /* use min-width instead of width */
+}
+.form-row-register input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #060606;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* Exercise container */
+.exercises {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Card styling */
+.exercise {
+    display: block;
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+.back {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 4em;
+  font-weight: 1000;
+  color: #ccc;
+  text-shadow: 8px 8px 12px #080808; 
+}
+.chest{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 4em;
+  font-weight: 1000;
+  color: #ccc;
+  text-shadow: 8px 8px 12px #080808; 
+}
+/* Hover effect */
+.exercise:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Image styling */
+
+.exercise img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    
+}
+
+
+/* Title styling */
+.exercise h3 {
+    text-align: center;
+    padding: 15px;
+    color: #333;
+    font-size: 36px;
+}
+.modal {
+  display: none;             /* hidden by default */
+  position: fixed;
+  inset: 0;                  /* full screen */
+  background: rgba(0,0,0,0.7);
+
+
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  padding: 20px;             /* prevent touching edges on small screens */
+  overflow: auto;            /* scroll if modal bigger than viewport */
+  border-radius: 10px ;
+}
+
+.modal-content {
+  width: 75vw;               /* 75% of viewport width */
+  max-height: 75vh;          /* 75% of viewport height */
+  background: white;
+  padding: 20px;
+  overflow-y: auto;          /* inner scroll if content is taller than modal */
+    box-sizing: border-box;
+}
+.palmsIn{
+  object-fit: contain;
+}
+
+
+.modal-body{
+  display:flex;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+.exercise-info{
+  width:45%;
+}
+
+.exercise-how{
+  width:45%;
+}
+.exercise-video {
+  display: flex;
+  justify-content: center; /* 👈 centers video */
+  padding-bottom: 20px;
+}
+.exercise-title{
+  text-align: center;
+}
+.perform{
+  text-align: center;
+}
+.tips{
+  text-align: center;
+}
+
+.close{
+  float:right;
+  font-size:24px;
+  cursor:pointer;
+}
+.modal-footer{
+  text-align: center;
+  color:#fcfafa;
+}
+
+.modal-footer button{
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #000000;
+  color:#fcfafa;
+}
+.modal-footer button:hover{
+  background-color: #333;
+}
+footer {
+  width: 100%;
+  height: 200px;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  font-size: .9em;
+  padding-top: 70px;
+}
