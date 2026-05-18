@@ -132,10 +132,10 @@ function viewWorkout(date) {
     .then((data) => {
       let container = document.getElementById("setsContainer");
 
-      container.innerHTML = `<h3>Workout on ${date}</h3>`;
+      container.innerHTML = `<h7>Workout on ${date}</h7>`;
 
       data.forEach((exercise) => {
-        container.innerHTML += `<h4>${exercise.name}</h4>`;
+        container.innerHTML += `<h6>${exercise.name}</h6>`;
 
         exercise.sets.forEach((set) => {
           container.innerHTML += `

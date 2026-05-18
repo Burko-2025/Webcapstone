@@ -31,7 +31,7 @@ session_start();
                 <tbody id="workoutTable"></tbody>
             </table>
 
-            <div id="setsContainer"></div>
+            
 
 <button class="finish-btn" onclick="finishWorkout()">
     Finish Workout
@@ -52,6 +52,7 @@ session_start();
                 </thead>
                 <tbody id="previousWorkoutsTable"></tbody>
             </table>
+            <div id="setsContainer"></div>
             <script src="home.js"></script>
         </main>
 
